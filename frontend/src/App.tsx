@@ -9,7 +9,7 @@ function App() {
     <Router>
       <Navbar />
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/d" element={<HomePage />} />
       </Routes>
       <BackToTop />
       <Footer />
