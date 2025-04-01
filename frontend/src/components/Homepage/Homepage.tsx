@@ -1,11 +1,9 @@
-import { useTheme } from "../../hooks/useTheme";
+import Recommendation from "../Recommendations/Recommendations";
 
 const HomePage = () => {
-  const { theme } = useTheme();
-
   return (
     <>
-      <h1>HomePage</h1>
+      <Recommendation />
     </>
   );
 };

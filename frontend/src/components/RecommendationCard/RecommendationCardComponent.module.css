@@ -1,0 +1,145 @@
+.recommendationscontainer {
+  width: 90%;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  gap: 1vw;
+  margin: 2vw auto;
+}
+
+.recommendationcardscontainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 3vw;
+  width: 100%;
+}
+
+/* Recommendation Card Styles (No Changes for Large Screens) */
+.recommendationcardbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 20vw;
+  min-height: 22vw;
+  border: 2px solid gray;
+  border-radius: 10px;
+  padding: 10px;
+  overflow: visible;
+  position: relative;
+  margin-left: 0.5vw;
+}
+
+.recommendationcardbox:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.ProductImage {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.ProductFeatured {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: gold;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 1vw;
+  font-weight: bold;
+}
+
+.ProductPrice {
+  font-size: 1.7vw;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.ProductModel,
+.ProductDescription,
+.ProductLocation,
+.ProductDateAdded {
+  font-size: 1vw;
+  margin-top: 5px;
+}
+
+/* Small Screens (Mobile Devices) */
+@media (max-width: 768px) {
+  .recommendationcardscontainer {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(350px, 1fr)
+    ); /* Bigger Cards */
+    gap: 4vw;
+  }
+
+  .recommendationcardbox {
+    width: 100%;
+    height: auto;
+    padding: 6vw;
+  }
+
+  .ProductImage {
+    width: 100%;
+    height: auto;
+    max-height: 50vw;
+  }
+
+  .ProductFeatured {
+    font-size: 4vw;
+    padding: 8px 16px;
+  }
+
+  .ProductPrice {
+    font-size: 6vw;
+  }
+
+  .ProductModel,
+  .ProductDescription,
+  .ProductLocation,
+  .ProductDateAdded {
+    font-size: 4vw;
+  }
+}
+
+/* Extra Small Screens (Phones < 480px) */
+@media (max-width: 480px) {
+  .recommendationcardscontainer {
+    grid-template-columns: 1fr;
+    gap: 5vw;
+  }
+
+  .recommendationcardbox {
+    width: 100%;
+    height: auto;
+    padding: 7vw;
+  }
+
+  .ProductImage {
+    width: 100%;
+    height: auto;
+    max-height: 60vw;
+  }
+
+  .ProductFeatured {
+    font-size: 5vw;
+    padding: 10px 20px;
+  }
+
+  .ProductPrice {
+    font-size: 7vw;
+  }
+
+  .ProductModel,
+  .ProductDescription,
+  .ProductLocation,
+  .ProductDateAdded {
+    font-size: 5vw;
+  }
+}
