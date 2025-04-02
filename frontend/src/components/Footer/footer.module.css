@@ -2,7 +2,10 @@ footer{
     position: relative;
     top: 60px;
 }
-.footer2-container{
+
+
+/* footer2 the upper one light css */
+.footer2container{
         color: black;
         display: flex;
         justify-content: space-between;
@@ -11,17 +14,19 @@ footer{
         top: 30px;
         height: 10%;
         padding-bottom:  0px;
-        border: 2px solid blue;
+        background-color: rgb(237, 237, 184);
+        /* border: 2px solid blue; */
 
 }
-.footer-mid-container{
+.footermidcontainer{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    
 
 }
-.sell-btn{
+.sellbtn{
     width: 100px;
     height: 50px;
     border-radius: 20px;
@@ -31,7 +36,7 @@ footer{
     border: none;
     cursor: pointer;
 }
-.sell-btn:hover{
+.sellbtn:hover{
     background: #000;
     -webkit-animation: pulse 2s infinite;
         animation: pulse512 1.5s infinite;
@@ -39,20 +44,38 @@ footer{
 
 @keyframes pulse512 {
     0% {
-        box-shadow: 0 0 0 0 #05bada66;
+        box-shadow: 0 0 0 10px #05bada66;
     }
 
     70% {
-        box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
+        box-shadow: 0 0 0 20px rgb(218 103 68 / 0%);
     }
 
     100% {
-        box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+        box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
     }
 }
 
-.img-size{
+.imgsize{
     width: 12%;
     height: auto;
+       
    
+}
+
+
+/* footer1 the lower one light css */
+.footer1container{
+    color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        position: relative;
+        top: 30px;
+        height: 10%;
+        padding-bottom: 0px;
+        background-color: rgb(29, 39, 48);
+        padding: 20px;
+        /* border: 2px solid blue; */
 }
