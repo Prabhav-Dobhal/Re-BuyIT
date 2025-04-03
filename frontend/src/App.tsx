@@ -1,4 +1,4 @@
-// import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import HomePage from "./components/Homepage/Homepage";
@@ -7,9 +7,16 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LoadingAnimation from "./components/LoadingReBuyIt/animation";
 import useLoading from "./hooks/useLoading"
 import ProductPage from "./components/ProductDetails/ProductPage";
+import LoadingAnimation from "./components/LoadingReBuyIt/animation";
 
 function App() {
-  const isLoading = useLoading();
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000); 
+  }, []);
 
   if (isLoading) return <LoadingAnimation />;
 
