@@ -1,45 +1,48 @@
-footer{
+footer {
     position: relative;
     top: 60px;
 }
 
 
 /* footer2 the upper one light css */
-.footer2container{
-        color: black;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: relative;
-        top: 30px;
-        height: 10%;
-        padding-bottom:  0px;
-        background-color: rgb(237, 237, 184);
-        /* border: 2px solid blue; */
+.footer2container {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    top: 30px;
+    height: 10%;
+    padding-bottom: 0px;
+    background-color: rgb(27, 27, 20);
+    /* border: 2px solid blue; */
 
 }
-.footermidcontainer{
+
+.footermidcontainer {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    
+
 
 }
-.sellbtn{
+
+.sellbtn {
     width: 100px;
     height: 50px;
     border-radius: 20px;
-    background-color: rgb(39, 38, 38);
+    background-color: rgb(240, 6, 6);
     color: white;
     font-size: large;
     border: none;
     cursor: pointer;
 }
-.sellbtn:hover{
-    background: #000;
+
+.sellbtn:hover {
+    /* background: #740303; */
     -webkit-animation: pulse 2s infinite;
-        animation: pulse512 1.5s infinite;
+    animation: pulse512 1.5s infinite;
 }
 
 @keyframes pulse512 {
@@ -56,13 +59,14 @@ footer{
     }
 }
 
-.imgsizeleft{
+.imgsizeleft {
     width: 12%;
     height: auto;
     border-top-right-radius: 118px;
     border-bottom-right-radius: 118px;
-   
+
 }
+
 .imgsizeright {
     width: 12%;
     height: auto;
@@ -72,17 +76,17 @@ footer{
 }
 
 /* footer1 the lower one light css */
-.footer1container{
+.footer1container {
     color: white;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        position: relative;
-        top: 30px;
-        height: 10%;
-        padding-bottom: 0px;
-        background-color: rgb(29, 39, 48);
-        padding: 20px;
-        /* border: 2px solid blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    top: 30px;
+    height: 10%;
+    padding-bottom: 0px;
+    background-color: black;
+    padding: 20px;
+    /* border: 2px solid blue; */
 }

@@ -15,7 +15,6 @@ function App() {
       </Routes>
       <BackToTop />
       <Footer />
-  
     </Router>
   );
 }

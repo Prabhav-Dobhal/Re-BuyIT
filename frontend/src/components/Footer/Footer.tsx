@@ -1,28 +1,36 @@
 
 import styles from  './footer.module.css';
+import darkstyles from './footerdark.module.css';
+import { useTheme } from "../../hooks/useTheme";
+ const  Footer : React.FC =()=> {
 
-export default function Footer() {
+  const { theme } = useTheme();
+  // const theme='lk';
+
+
+  
   return (
     <footer>
-      <div className={ styles.footer2container }>
-        <img src={`${import.meta.env.BASE_URL}Footerimg2/left-hand.png`} alt="Left Hand" className={styles.imgsize} />
+      <div className={ theme==='light' ?styles.footer2container : darkstyles.footer2container  }>
+        <img src={`${import.meta.env.BASE_URL}Footerimg2/left-hand.png`} alt="Left Hand" className={theme==='light' ?styles.imgsizeleft : darkstyles.imgsizeleft} />
 
-        <div className={styles.footermidcontainer}>
+        <div className={theme==='light' ?styles.footermidcontainer : darkstyles.footermidcontainer}>
           <h1>Do you prefer to earn ? </h1>
           <p>Sell electronic devices 100% without risk </p>
-          <button className={styles.sellbtn}>Sell now</button>
+          <button className={theme==='light'?styles.sellbtn : darkstyles.sellbtn}>Sell now</button>
           
             <p>✔️ Free shipping and insured   ✔️ Over 75 million product sold  ✔️ Quick and easy sales method</p>
        
         </div>
-        <img src={`${import.meta.env.BASE_URL}Footerimg2/right-hand.png`} alt="Left Hand" className={styles.imgsize} />
+        <img src={`${import.meta.env.BASE_URL}Footerimg2/right-hand.png`} alt="Left Hand" className={theme==='light'?styles.imgsizeright : darkstyles.imgsizeright} />
       </div>
-      <div className={styles.footer1container}>
+      <div className={theme==='light'?styles.footer1container : darkstyles.footer1container}>
         <p>© 2009 - 2025 rebuy recommerce GmbH. VAT no.: DE237458635</p>
         <p>Buying and selling used items</p>
         <p>All rights reserved.</p>
-        <p>Legal Notice &nbsp; &nbsp;&nbsp;  | &nbsp; &nbsp;&nbsp;  Privacy Policy &nbsp; &nbsp;&nbsp;  | &nbsp; &nbsp;&nbsp;  Terms and Conditions &nbsp; &nbsp;&nbsp;  | &nbsp; &nbsp;&nbsp;  Cookie Policy &nbsp; &nbsp;&nbsp;  | &nbsp; &nbsp;&nbsp;  Manage cookie settings</p>
+        <p>Legal Notice &nbsp; &nbsp;&nbsp;  | &nbsp; &nbsp;&nbsp;  Privacy Policy &nbsp; &nbsp;&nbsp;  | &nbsp; &nbsp;&nbsp;  Terms and Conditions </p>
       </div>
     </footer>
   )
 }
+export default Footer ;
