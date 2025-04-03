@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./Wishlist.module.css";
 import { useTheme } from "../../../hooks/useTheme"; 
-import heartIcon from "./hearts_18811641.png";  
-import heartFilledIcon from "./istockphoto-1125688086-612x612.jpg"; 
+import heartIcon from "../../../../public/NavBarPhotos/hearts_18811641.png";  
+import heartFilledIcon from "../../../../public/NavBarPhotos/istockphoto-1125688086-612x612.jpg"; 
 
 const Heart: React.FC = () => {
   const { theme } = useTheme();  

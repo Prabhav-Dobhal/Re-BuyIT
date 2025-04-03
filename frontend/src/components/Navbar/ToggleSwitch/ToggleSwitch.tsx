@@ -1,8 +1,8 @@
 import { useTheme } from "../../../hooks/useTheme";
 import React from "react";
 import styles from "./ToggleSwitch.module.css";
-import moon from "./night-mode (2).png";
-import sun from "./light.png";
+import moon from "../../../../public/NavBarPhotos/night-mode (2).png";
+import sun from "../../../../public/NavBarPhotos/light.png";
 function ToggleSwitch() {
   const { theme, toggleTheme } = useTheme();
 

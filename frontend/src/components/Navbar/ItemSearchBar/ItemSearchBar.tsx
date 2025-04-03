@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "./ItemSearchBar.module.css";
-import search from "./magnifying-glass.png";
+import search from "../../../../public/NavBarPhotos/magnifying-glass.png";
 import { useTheme } from "../../../hooks/useTheme"; 
 
 const placeholderTexts = [
