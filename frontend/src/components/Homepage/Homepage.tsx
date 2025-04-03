@@ -1,11 +1,11 @@
-import { useTheme } from "../../hooks/useTheme";
+import Recommendation from "../Recommendations/Recommendations";
+import SubHeader from "../SubHeader/SubHeader";
 
 const HomePage = () => {
-  const { theme } = useTheme();
-
   return (
     <>
-      <h1>HomePage</h1>
+      <SubHeader />
+      <Recommendation />
     </>
   );
 };

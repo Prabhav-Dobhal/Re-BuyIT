@@ -1,0 +1,31 @@
+.subheaderbox {
+  display: flex;
+  width: 100vw;
+  height: 3vw;
+  align-items: space-around;
+  justify-content: center;
+  gap: 6vw;
+}
+
+.subheadingtext {
+  font-size: 1.2vw;
+}
+
+.subheadingtext:hover {
+  cursor: pointer;
+  color: rgba(13, 233, 233, 0.652);
+}
+
+@media (max-width: 800px) {
+  .subheaderbox {
+    display: flex;
+    width: 100vw;
+    height: 3vw;
+    align-items: space-around;
+    justify-content: center;
+    gap: 3vw;
+  }
+  .subheadingtext {
+    font-size: 3vw;
+  }
+}
