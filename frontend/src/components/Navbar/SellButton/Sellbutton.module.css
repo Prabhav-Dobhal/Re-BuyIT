@@ -1,0 +1,70 @@
+.sellButton {
+  padding: 12px 26px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border: 2px solid transparent; 
+  outline: none;
+  display: inline-block;
+  text-align: center;
+  background: linear-gradient(135deg, #84fab0, #8fd3f4); 
+  color: white;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(132, 250, 176, 0.5); 
+}
+
+
+.sellButton::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 32px;
+  background: linear-gradient(135deg, #84fab0, #8fd3f4);
+  z-index: -1;
+  filter: blur(8px);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+
+.sellButton:hover {
+  background: linear-gradient(135deg, #8fd3f4, #84fab0);
+  transform: scale(1.07);
+  box-shadow: 0 6px 20px rgba(132, 250, 176, 0.7);
+}
+
+.sellButton:hover::before {
+  opacity: 1; 
+}
+
+
+.dark .sellButton {
+  background: linear-gradient(135deg, #90f7ec, #32ccbc); 
+  box-shadow: 0 4px 15px rgba(50, 204, 188, 0.5);
+}
+
+.dark .sellButton::before {
+  background: linear-gradient(135deg, #32ccbc, #90f7ec);
+}
+
+.dark .sellButton:hover {
+  background: linear-gradient(135deg, #32ccbc, #90f7ec);
+  transform: scale(1.07);
+  box-shadow: 0 6px 20px rgba(50, 204, 188, 0.7);
+}
+
+.dark .sellButton:hover::before {
+  opacity: 1;
+}
+@media (max-width: 768px) {
+  .sellButton {
+    padding: 10px 22px;
+    font-size: 14px;
+  }
+}

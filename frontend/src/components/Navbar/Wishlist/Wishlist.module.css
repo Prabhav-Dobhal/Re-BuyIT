@@ -1,0 +1,28 @@
+.heartContainer {
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.heartIcon {
+    width: 20px;
+    height: 20px;
+    transition: filter 0.3s ease-in-out;
+}
+
+.dark .heartIcon {
+    filter: brightness(0) invert(1);
+}
+.dark .heartIcon:hover {
+    transform: scale(1.2);
+    filter: none;
+}
+
+.light .heartIcon {
+    filter: brightness(1) invert(0);
+}
+
+
+.heartContainer:hover {
+    transform: scale(1.2);
+}
