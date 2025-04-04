@@ -1,30 +1,60 @@
+
+/* SubHeader Container */
 .subheaderbox {
   display: flex;
   width: 100vw;
   height: 3vw;
-  align-items: space-around;
+  align-items: center;
   justify-content: center;
-  gap: 6vw;
+  gap: 4vw;
+  padding: 0.5vw 2vw;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Light & Dark Theme */
+.subheaderbox.light {
+  background-color: #ffffff;
+  color: #222;
+}
+
+.subheaderbox.dark {
+  background-color: #111;
+  color: #f1f1f1;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Subheading Text */
 .subheadingtext {
   font-size: 1.2vw;
+  font-weight: 500;
+  transition: color 0.2s ease, transform 0.2s ease;
 }
 
+/* Hover Effects */
 .subheadingtext:hover {
   cursor: pointer;
-  color: rgba(13, 233, 233, 0.652);
+  transform: scale(1.1);
 }
 
+.subheadingtext.light:hover {
+  color: #007bff;
+}
+
+.subheadingtext.dark:hover {
+  color: #25ac5d;
+}
+
+/* Responsive Styling */
 @media (max-width: 800px) {
   .subheaderbox {
-    display: flex;
-    width: 100vw;
-    height: 3vw;
-    align-items: space-around;
-    justify-content: center;
+    flex-wrap: wrap;
+    height: auto;
+    padding: 1.5vw;
     gap: 3vw;
   }
+
   .subheadingtext {
     font-size: 3vw;
   }
