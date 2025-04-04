@@ -4,6 +4,7 @@ import Footer from "./components/Footer/Footer";
 import HomePage from "./components/Homepage/Homepage";
 import BackToTop from "./components/BackToTop/BackToTop";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ProductPage from "./components/ProductDetails/ProductPage";
 import LoadingAnimation from "./components/LoadingReBuyIt/animation";
 import useLoading from "./hooks/useLoading"
 
@@ -17,6 +18,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/productDetails" element={<ProductPage />} />
       </Routes>
       <BackToTop />
       <Footer />
