@@ -9,6 +9,7 @@ import useLoading from "./hooks/useLoading"
 import ProductPage from "./components/ProductDetails/ProductPage";
 import LoadingAnimation from "./components/LoadingReBuyIt/animation";
 import useLoading from "./hooks/useLoading"
+import ProductPage from "./components/ProductDetails/ProductPage";
 
 function App() {
   const isLoading = useLoading();
