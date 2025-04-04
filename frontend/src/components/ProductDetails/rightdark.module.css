@@ -10,9 +10,9 @@
   .card {
     padding: 16px;
     margin-bottom: 16px;
-    background: #fff;
+    background: black;
     border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 6px white;
   }
   
   /* 1️⃣ Price & Property Details */
@@ -25,7 +25,7 @@
   .price {
     font-size: 22px;
     font-weight: bold;
-    color: #333;
+    color: white;
   }
   
   .icons {
@@ -35,13 +35,13 @@
   
   .icon {
     cursor: pointer;
-    color: #666;
+    color: white;
   }
   
   .details {
     margin-top: 6px;
     font-size: 14px;
-    color: #444;
+    color: white;
   }
   
   .footer {
@@ -53,12 +53,12 @@
   
   .address {
     font-size: 12px;
-    color: #777;
+    color: white;
   }
   
   .date {
     font-size: 12px;
-    color: #777;
+    color: white;
   }
   
   /* 2️⃣ Seller Info */
@@ -122,7 +122,7 @@
   
   .postedAddress {
     font-size: 13px;
-    color: #777;
+    color: white;
   }
   
   /* 4️⃣ Google Map */
@@ -133,13 +133,13 @@
   .coordLabel {
     font-size: 14px;
     font-weight: bold;
-    color: #333;
+    color: white;
     margin-bottom: 2px;
   }
   
   .coordinates {
     font-size: 13px;
-    color: #666;
+    color: white;
   }
   
   .map {
