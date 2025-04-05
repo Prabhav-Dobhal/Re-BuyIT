@@ -1,3 +1,6 @@
+body{
+  overflow-x: hidden;
+}
 .searchContainer {
   position: relative;
   display: flex;
@@ -56,8 +59,8 @@
   border-color: #007bff;
   box-shadow: 0px 4px 8px rgba(0, 123, 255, 0.2);}
 
-.light .searchButton img {
-  filter : invert(0);
+.light .searchButton .icon {
+  color : #444444e6;
 }
 
 .dark .searchBar {
@@ -69,15 +72,26 @@
   border-color: #25ac5d;
   box-shadow: 0px 4px 8px rgba(37, 172, 93, 0.2);
 }
-.dark .searchButton img {
-  filter: invert(1); 
+.dark .icon {
+  color : whitesmoke; 
 }
+
 .dark .searchBar:hover {
   border-color: #25ac5d;
   box-shadow : none;
   border : 1px solid #25ac5d;
 }
+.light.icon:hover {
+  color: #007bff; 
+  opacity: 0.7;
+  transform: scale(1.3);
+}
 
+.icon.dark:hover {
+  color : #25ac5d;
+  opacity: 0.7;
+  transform: scale(1.3);
+}
 @media (max-width: 768px) {
   .searchContainer {
       width: 100%;

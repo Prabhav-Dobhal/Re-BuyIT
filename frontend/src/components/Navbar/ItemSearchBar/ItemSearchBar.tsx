@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import styles from "./ItemSearchBar.module.css";
 import search from "/NavBarPhotos/magnifying-glass.png";
 import { useTheme } from "../../../hooks/useTheme"; 
-
+import { FaSearch } from "react-icons/fa";
 const placeholderTexts = [
   "Search for products...",
   "Find your favorite items...",
@@ -39,7 +39,7 @@ const ItemSearchBar: React.FC = () => {
         className={`${styles.searchBar} ${styles[theme]}`}
       />
       <button className={`${styles.searchButton} ${styles[theme]}`}>
-        <img src={search} alt="Search" />
+        <FaSearch className={`${styles.icon} ${styles[theme]}`}/>
       </button>
     </div>
   );
