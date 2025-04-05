@@ -1,4 +1,3 @@
-// import { useEffect } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import HomePage from "./components/Homepage/Homepage";
@@ -23,6 +22,14 @@ function App() {
         <Route path="/myads" element={<MyAds />} />
         <Route path="/productDetails" element={<ProductPage />} />
         <Route path="/WishList" element={<WishList />} />
+        <Route path="/Sell" element={<SellPage />} />
+        <Route path="/Sell/Cameras" element={<SellCameras />} />
+        <Route path="/Sell/Cars" element={<SellCars />} />
+        <Route path="/Sell/Scooters" element={<SellScooters />} />
+        <Route path="/Sell/Phones" element={<SellPhones />} />
+        <Route path="/Sell/Houses" element={<SellHouses />} />
+        <Route path="/Sell/Laptops" element={<SellLaptops />} />
+        <Route path="/Sell/Motorcycles" element={<SellMotorcycles />} />
       </Routes>
       <BackToTop />
       <Footer />
