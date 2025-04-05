@@ -1,8 +1,17 @@
-const Navbar = () => {
+import React, { useState } from "react";
+import styles from "./Navbar.module.css";
+import AuthModal from "../AuthModal/AuthModal";
+
+const Navbar: React.FC = () => {
+  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
+
   return (
     <>
-      <h1>Navbar</h1>
+        <div>
+          Navbar
+        </div>
     </>
   );
 };
+
 export default Navbar;
