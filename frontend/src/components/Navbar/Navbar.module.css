@@ -27,15 +27,6 @@
   gap: 20px;
 }
 
-button {
-  padding: 10px 16px;
-  border: none;
-  border-radius: 30px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-
 .light button {
   background-color: black;
   color: white;

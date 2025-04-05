@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
+import React from "react";
 import styles from "./Navbar.module.css";
 import Logo from "../Logo/Logo";
 import ToggleSwitch from "../Navbar/ToggleSwitch/ToggleSwitch";
-import Sellbutton from "../Navbar/SellButton/Sellbutton";
+import Sellbutton from "./SellButton/Sellbutton";
 import Login from "../Navbar/Login/Login";
 import WishlistButton from "../Navbar/Wishlist/Wishlist";
 import LocationSearchBar from "../Navbar/LocationSearchBar/LocationSearchBar";
