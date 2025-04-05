@@ -1,0 +1,41 @@
+.back-to-top-button {
+    position: fixed;
+    top: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: #ffffff;
+    color: #212121;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 999px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .back-to-top-button.dark {
+    background-color: #212121;
+    color: #ffffff;
+  }
+  
+  .back-to-top-icon {
+    width: 20px;
+    height: 20px;
+    transition: filter 0.3s ease;
+  }
+  
+  .back-to-top-button:not(.dark) .back-to-top-icon {
+    filter: brightness(0);
+  }
+  
+  .back-to-top-button.dark .back-to-top-icon {
+    filter: brightness(0) invert(1);
+  }
+  
