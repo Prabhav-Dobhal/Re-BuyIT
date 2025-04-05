@@ -1,4 +1,4 @@
-import { formatPrice } from "../../utils/priceformatterUtils";
+import { formatPrice } from "../../utils/priceFormatterUtils";
 import { RecommendationCard } from "../Recommendations/Recommendation.types";
 import styles from "./RecommendationCardComponent.module.css";
 
