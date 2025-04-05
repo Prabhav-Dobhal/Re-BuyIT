@@ -1,18 +1,19 @@
 import styles from "./SubHeader.module.css";
-
+import { useTheme } from '../../hooks/useTheme';
+const categories : string[] = ["Motorcycles", "Phones", "Houses", "Laptops", "Scooters", "Cameras", "Cars"];
 const SubHeader = () => {
+  const { theme } = useTheme();
+
+  
+
   return (
-    <>
-      <div className={styles.subheaderbox}>
-        <span className={styles.subheadingtext}>Cars</span>
-        <span className={styles.subheadingtext}>Motorcycles</span>
-        <span className={styles.subheadingtext}>Phones</span>
-        <span className={styles.subheadingtext}>Houses</span>
-        <span className={styles.subheadingtext}>Laptops</span>
-        <span className={styles.subheadingtext}>Scooters</span>
-        <span className={styles.subheadingtext}>Cameras</span>
-      </div>
-    </>
+    <div className={`${styles.subheaderbox} ${styles[theme]}`}>
+      {categories.map((item, index) => (
+        <span key={index} className={`${styles.subheadingtext} ${styles[theme]}`}>
+          {item}
+        </span>
+      ))}
+    </div>
   );
 };
 
