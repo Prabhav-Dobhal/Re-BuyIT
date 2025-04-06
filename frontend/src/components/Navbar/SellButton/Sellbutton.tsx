@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./SellButton.module.css";
+import styles from "./Sellbutton.module.css";
 import { useTheme } from "../../../hooks/useTheme";
 
 const SellButton: React.FC = () => {
