@@ -6,9 +6,11 @@ const SellButton: React.FC = () => {
   const { theme } = useTheme();
 
   return (
-    <button className={`${styles.sellButton} ${theme === "dark" ? styles.dark : ""}`}>
+    <div className={`${styles.sellButtonContainer} ${theme === "dark" ? styles.dark : ""}`}>
+      <button className={`${styles.sellButton} ${theme === "dark" ? styles.dark : ""}`}>
       Sell
     </button>
+    </div>
   );
 };
 

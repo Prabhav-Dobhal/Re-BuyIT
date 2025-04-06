@@ -1,4 +1,8 @@
 
+.login{
+  display: flex;
+  margin : 0.1vh;
+}
 .light {
     color: black;
     text-decoration: none;

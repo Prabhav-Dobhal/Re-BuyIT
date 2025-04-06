@@ -1,3 +1,9 @@
+.sellButtonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0vw 0.1vw ;
+}
 .sellButton {
   padding: 12px 26px;
   border-radius: 30px;

@@ -14,8 +14,8 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className={`${styles.navbar} ${theme === "dark" ? styles.dark : styles.light}`}>
-      <Logo />
       <div className={styles.navbarContent}>
+        <Logo />
         <LocationSearchBar />
         <ItemSearchBar />
         <Login />

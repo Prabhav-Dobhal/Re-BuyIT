@@ -1,7 +1,7 @@
 .locationDropdown {
   position: relative;
   display: inline-block;
-  width: 250px;
+  width: 20vw;
 }
 
 
@@ -92,14 +92,4 @@
   color: white;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .locationDropdown {
-    width: 100%;
-  }
 
-  .locationInput {
-    font-size: 14px;
-    padding: 10px;
-  }
-}

@@ -22,9 +22,10 @@
   justify-content: center;
   background: none !important;
   border: none;
-  padding: 5px;
+  padding: 0.1vw;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
+  margin: 0vw 0.7vw;
 }
 .imgContainer:hover {
   transform: scale(1.1);
@@ -39,15 +40,4 @@
 }
 .dark .img {
   filter: invert(1);
-}
-@media (max-width: 768px) {
-  .img {
-    width: 16px;
-    height: 16px;
-  }
-
-  .light, .dark {
-    padding: 6px 12px;
-    font-size: 14px;
-  }
 }
