@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Logo.module.css";
 import { useTheme } from "../../hooks/useTheme"; 
-import cartIcon from "../../assets/JhanduBaam.png"; 
+import cartIcon from "../../assets/Cartlogo.png"; 
 const Logo: React.FC = () => {
     const { theme } = useTheme();  
 
