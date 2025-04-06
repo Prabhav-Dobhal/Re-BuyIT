@@ -1,4 +1,4 @@
-import React from "react";
+import  {useState }from "react";
 import styles from "./Wishlist.module.css";
 import { useTheme } from "../../../hooks/useTheme"; 
 import heartIcon from "/NavBarPhotos/hearts_18811641.png";  
@@ -6,11 +6,11 @@ import heartFilledIcon from "/public/NavBarPhotos/istockphoto-1125688086-612x612
 
 const Heart: React.FC = () => {
   const { theme } = useTheme();  
-  const [hovered, setHovered] = React.useState(false);
+  const [hovered, setHovered] = useState<boolean>(false);
 
   return (
     <div 
-      className={`${styles.heartContainer} ${theme === "dark" ? styles.dark : styles.light}`}
+      className={`${styles.heartContainer} ${styles[theme]}`}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >

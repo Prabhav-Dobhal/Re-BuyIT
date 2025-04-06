@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import styles from "./ItemSearchBar.module.css";
-import search from "/NavBarPhotos/magnifying-glass.png";
 import { useTheme } from "../../../hooks/useTheme"; 
 import { FaSearch } from "react-icons/fa";
 const placeholderTexts = [
@@ -11,8 +10,8 @@ const placeholderTexts = [
 
 const ItemSearchBar: React.FC = () => {
   const { theme } = useTheme();
-  const [query, setQuery] = useState("");
-  const [placeholder, setPlaceholder] = useState(placeholderTexts[0]);
+  const [query, setQuery] = useState<string>("");
+  const [placeholder, setPlaceholder] = useState <string>(placeholderTexts[0]);
 
   useEffect(() => {
     const interval = setInterval(() => {

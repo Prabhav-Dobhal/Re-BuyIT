@@ -13,7 +13,7 @@ const Navbar: React.FC = () => {
   const {theme} = useTheme();
 
   return (
-    <nav className={`${styles.navbar} ${theme === "dark" ? styles.dark : styles.light}`}>
+    <nav className={`${styles.navbar} ${styles[theme]}`}>
       <div className={styles.navbarContent}>
         <Logo />
         <LocationSearchBar />

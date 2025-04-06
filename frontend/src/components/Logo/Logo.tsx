@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Logo.module.css";
 import { useTheme } from "../../hooks/useTheme"; 
-
+import cartIcon from "../../assets/JhanduBaam.png"; 
 const Logo: React.FC = () => {
     const { theme } = useTheme();  
 
@@ -9,7 +9,7 @@ const Logo: React.FC = () => {
         <div className={`${styles.cartContainer} ${styles[theme]}`}>
             <div className={`${styles.cartLogo} ${styles[theme]}`}>
                 <img
-                    src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png"
+                    src={cartIcon}
                     alt="Shopping Cart"
                     className={styles.cartImage}
                 />

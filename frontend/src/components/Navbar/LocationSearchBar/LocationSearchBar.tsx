@@ -11,8 +11,8 @@ const locations = [
 
 const LocationSearchBar: React.FC = () => {
   const { theme } = useTheme(); 
-  const [search, setSearch] = useState("");
-  const [showDropdown, setShowDropdown] = useState(false);
+  const [search, setSearch] = useState<string>("");
+  const [showDropdown, setShowDropdown] = useState<boolean>(false);
 
   const handleSearch = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
     const searchQuery = event.target.value;
