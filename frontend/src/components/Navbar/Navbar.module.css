@@ -1,0 +1,28 @@
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 24px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.light {
+  background-color: #ffffff;
+  color: #222;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.dark {
+  background-color: rgba(0, 0, 0, 0.924);
+  color: #f1f1f1;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.08);
+}
+.navbarContent {
+  display: flex;
+  align-items: center;      
+  justify-content: center; 
+  gap : 1vw;                 
+}

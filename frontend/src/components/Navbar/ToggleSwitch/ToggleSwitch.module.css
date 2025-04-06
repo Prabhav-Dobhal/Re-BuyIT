@@ -1,0 +1,43 @@
+.light {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+.dark {
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+.imgContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none !important;
+  border: none;
+  padding: 0.1vw;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  margin: 0vw 0.7vw;
+}
+.imgContainer:hover {
+  transform: scale(1.1);
+}
+.img {
+  width: 25px;  
+  height: 25px;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.light .img {
+  filter: invert(0);
+}
+.dark .img {
+  filter: invert(1);
+}
