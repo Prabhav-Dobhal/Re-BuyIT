@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Navbar.module.css";
 import Logo from "../Logo/Logo";
 import ToggleSwitch from "../Navbar/ToggleSwitch/ToggleSwitch";
@@ -8,22 +8,38 @@ import WishlistButton from "../Navbar/Wishlist/Wishlist";
 import LocationSearchBar from "../Navbar/LocationSearchBar/LocationSearchBar";
 import ItemSearchBar from "../Navbar/ItemSearchBar/ItemSearchBar";
 import { useTheme } from "../../hooks/useTheme"; 
+import AuthModal from "../AuthModal/AuthModal";
 
 const Navbar: React.FC = () => {
-  const {theme} = useTheme();
+  const { theme } = useTheme();
+  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
+
+  const handleLoginClick = () => {
+    setIsAuthModalOpen(true);
+  };
+
+  const handleModalClose = () => {
+    setIsAuthModalOpen(false);
+  };
 
   return (
-    <nav className={`${styles.navbar} ${styles[theme]}`}>
-      <div className={styles.navbarContent}>
-        <Logo />
-        <LocationSearchBar />
-        <ItemSearchBar />
-        <Login />
-        <WishlistButton />
-        <ToggleSwitch />
-        <Sellbutton />
-      </div>
-    </nav>
+    <>
+      <nav className={`${styles.navbar} ${styles[theme]}`}>
+        <div className={styles.navbarContent}>
+          <Logo />
+          <LocationSearchBar />
+          <ItemSearchBar />
+          <Login onClick={handleLoginClick} />
+          <WishlistButton />
+          <ToggleSwitch />
+          <Sellbutton />
+        </div>
+      </nav>
+
+      {isAuthModalOpen && (
+        <AuthModal onClose={handleModalClose} />
+      )}
+    </>
   );
 };
 

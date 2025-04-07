@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import Carousel from './Carousel';
 import styles from './AuthModal.module.css';
-// import { useTheme } from '../../hooks/useTheme';
+import { useTheme } from '../../hooks/useTheme';
 const AuthModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
-  // const {theme}= useTheme();
+  const {theme}= useTheme();
   const [isLogin, setIsLogin] = useState(true);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -50,14 +50,14 @@ const AuthModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
 
   return (
     <div className={styles.modalOverlay}>
-      <div className={styles.modalContent}>
+      <div className={`${styles.modalContent} ${styles[theme]}`}>
         <button className={styles.closeButton} onClick={onClose}>
           &times;
         </button>
 
         <Carousel images={carouselImages} />
 
-        <h2 className={styles.title}>{isLogin ? 'Login' : 'Register'}</h2>
+        <h2 className={`${styles.title} ${styles[theme]}`}>{isLogin ? 'Login' : 'Register'}</h2>
 
         <form onSubmit={handleSubmit} className={styles.authForm}>
           <div className={styles.formGroup}>
