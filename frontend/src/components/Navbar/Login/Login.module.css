@@ -30,3 +30,14 @@
     color: lightgray;
   }
   
+  .profileButton {
+    display: flex;
+    align-items: center;
+    background-color: #f1f1f1;
+    padding: 8px 12px;
+    border-radius: 9999px;
+    cursor: pointer;
+    border: none;
+    gap: 8px;
+  }
+  
