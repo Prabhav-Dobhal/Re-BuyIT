@@ -46,9 +46,12 @@
 
 .ProductImage {
   max-width: 100%;
-  height: auto;
+  height: 18vw;
+  width: 20vw;
   object-fit: contain;
   border-radius: 10px;
+  border: 0.01vw solid gray;
+  object-fit: cover;
 }
 
 .ProductFeatured {
