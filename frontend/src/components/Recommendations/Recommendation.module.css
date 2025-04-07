@@ -24,6 +24,10 @@
   width: 90%;
   margin: 1vw;
 }
+.freshRecommendationHeaderText {
+  margin-left: 2vw;
+  margin-top: 2vw;
+}
 
 /* Individual recommendation card styles */
 .recommendationcardbox {
@@ -40,7 +44,7 @@
   overflow: visible;
   position: relative;
   margin-left: 0.5vw;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for smooth effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Medium Screens (Tablets & Small Laptops) */

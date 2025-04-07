@@ -5,7 +5,8 @@ import HomePage from "./components/Homepage/Homepage";
 import BackToTop from "./components/BackToTop/BackToTop";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LoadingAnimation from "./components/LoadingReBuyIt/animation";
-import useLoading from "./hooks/useLoading"
+import useLoading from "./hooks/useLoading";
+import WishList from "./components/WishList/WishList";
 import ProductPage from "./components/ProductDetails/ProductPage";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/productDetails" element={<ProductPage />} />
+        <Route path="/WishList" element={<WishList />} />
       </Routes>
       <BackToTop />
       <Footer />
