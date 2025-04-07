@@ -152,7 +152,6 @@
   background-color: #4338ca;
 }
 
-/* Switch Between Login/Register */
 .switchText {
   text-align: center;
   margin-top: 1.75rem;
@@ -220,4 +219,16 @@
 .swiper-pagination-bullet-active {
   opacity: 1 !important;
   background: white !important;
+}
+
+.light {
+  background-color: #ffffff;
+  color: #222;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.dark {
+  background-color: rgba(0, 0, 0, 0.924);
+  color: #f1f1f1;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.08);
 }

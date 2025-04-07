@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import Carousel from './Carousel';
 import styles from './AuthModal.module.css';
-
+// import { useTheme } from '../../hooks/useTheme';
 const AuthModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
-  const [isLogin, setIsLogin] = useState(true); // Track login/register state
+  // const {theme}= useTheme();
+  const [isLogin, setIsLogin] = useState(true);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
@@ -12,17 +13,17 @@ const AuthModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
   const carouselImages = [
     {
       id: '1',
-      src: '/LoginCarousel/img1.png',
+      src: '/LoginCarousel/img1.jpg',
       alt: 'Promotion 1'
     },
     {
       id: '2',
-      src: '/LoginCarousel/img2.png',
+      src: '/LoginCarousel/img2.jpg',
       alt: 'Promotion 2'
     },
     {
       id: '3',
-      src: '/LoginCarousel/img3.png',
+      src: '/LoginCarousel/img3.jpg',
       alt: 'Promotion 3'
     }
   ];
@@ -42,7 +43,6 @@ const AuthModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
 
   const handleSwitchMode = () => {
     setIsLogin(!isLogin);
-    // Clear form when switching
     setEmail('');
     setPassword('');
     setConfirmPassword('');
@@ -100,7 +100,7 @@ const AuthModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
           </div>
 
           {!isLogin && (
-            <div className={styles.formGroup}>
+            <div className={styles.formGroup} >
               <label htmlFor="confirmPassword">Confirm Password</label>
               <input
                 type={showPassword ? 'text' : 'password'}
@@ -108,7 +108,7 @@ const AuthModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
                 placeholder="••••••••••"
-                className={styles.inputField}
+                className={styles.inputField} 
                 required
                 autoComplete="new-password"
               />
@@ -120,7 +120,7 @@ const AuthModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
           </button>
         </form>
 
-        <div className={styles.switchText}>
+        <div className={styles.switchText} >
           {isLogin ? "Don't have an account? " : "Already have an account? "}
           <button
             type="button"

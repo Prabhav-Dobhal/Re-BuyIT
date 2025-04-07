@@ -5,11 +5,27 @@ import AuthModal from "../AuthModal/AuthModal";
 const Navbar: React.FC = () => {
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
 
+  const handleAuthModalToggle = () => {
+    setIsAuthModalOpen(!isAuthModalOpen);
+  };
+
   return (
     <>
-        <div>
-          Navbar
-        </div>
+      <div 
+        className={styles.navbar} 
+        onClick={handleAuthModalToggle}
+        role="button"
+        tabIndex={0}
+        onKeyDown={(e) => e.key === 'Enter' && handleAuthModalToggle()}
+      >
+        Navbar
+      </div>
+      
+      {isAuthModalOpen && (
+        <AuthModal 
+          onClose={() => setIsAuthModalOpen(false)} 
+        />
+      )}
     </>
   );
 };
