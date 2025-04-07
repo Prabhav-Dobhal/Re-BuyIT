@@ -24,7 +24,7 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
     arrows: false,
     pauseOnHover: true,
     cssEase: 'ease-in-out',
-    adaptiveHeight: false // Set to false for consistent height
+    adaptiveHeight: false 
   };
 
   return (

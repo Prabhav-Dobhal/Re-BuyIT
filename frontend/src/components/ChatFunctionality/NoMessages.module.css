@@ -1,0 +1,142 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .messageBubble {
+    position: relative;
+    margin-bottom: 2.5rem;
+  }
+  
+  .bubbleBody {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
+  }
+  
+  .bubbleTail {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 25px solid #6366f1;
+  }
+  
+  .chatIcon {
+    width: 50px;
+    height: 50px;
+    fill: white;
+  }
+  
+  .title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .subtitle {
+    font-size: 1.1rem;
+    color: #6b7280;
+    margin-bottom: 2rem;
+    text-align: center;
+    max-width: 350px;
+    line-height: 1.6;
+  }
+  
+  .actionButton {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(79, 70, 229, 0.2);
+  }
+  
+  .actionButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(79, 70, 229, 0.3);
+  }
+  
+  .actionButton:active {
+    transform: translateY(0);
+  }
+  
+  .decorativeElements {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+  }
+  
+  .dot1, .dot2, .dot3 {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(99, 102, 241, 0.1);
+  }
+  
+  .dot1 {
+    width: 200px;
+    height: 200px;
+    top: -50px;
+    right: -50px;
+  }
+  
+  .dot2 {
+    width: 150px;
+    height: 150px;
+    bottom: 20%;
+    left: -30px;
+  }
+  
+  .dot3 {
+    width: 100px;
+    height: 100px;
+    bottom: -20px;
+    right: 30%;
+  }
+  
+  /* Dark mode */
+  [data-theme="dark"] .title {
+    color: #f3f4f6;
+  }
+  
+  [data-theme="dark"] .subtitle {
+    color: #d1d5db;
+  }
+  
+  [data-theme="dark"] .bubbleBody {
+    background: linear-gradient(135deg, #7c3aed, #9333ea);
+  }
+  
+  [data-theme="dark"] .bubbleTail {
+    border-top-color: #7c3aed;
+  }
+  
+  [data-theme="dark"] .actionButton {
+    background: linear-gradient(135deg, #7c3aed, #9333ea);
+  }
