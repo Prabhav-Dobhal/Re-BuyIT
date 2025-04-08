@@ -6,6 +6,7 @@ import BackToTop from "./components/BackToTop/BackToTop";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LoadingAnimation from "./components/LoadingReBuyIt/animation";
 import useLoading from "./hooks/useLoading"
+import ProductPage from "./components/ProductDetails/ProductPage";
 
 function App() {
   const isLoading = useLoading();
@@ -17,6 +18,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/productDetails" element={<ProductPage />} />
       </Routes>
       <BackToTop />
       <Footer />
