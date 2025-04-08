@@ -7,7 +7,7 @@ import { useState } from 'react';
 const Notification: React.FC = () => {
 const {theme} =useTheme();
 //only for testing conc. to db for real render
-const [notifications, setNotifications] = useState<number>(1);
+const [notifications, setNotifications] = useState<number>(0);
   return (
     <div className={`${styles.chatContainer} ${styles[theme]}`}>
       <Link to="#">

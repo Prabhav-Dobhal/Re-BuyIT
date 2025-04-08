@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { RiChat1Line } from "react-icons/ri";
-import styles from './Chat.module.css'; // assuming you use CSS Modules
+import styles from './Chat.module.css'; 
 import {useTheme} from '../../../hooks/useTheme';
 
 
 const Chat: React.FC = () => {
     const theme = useTheme();
-    const [notifications]= useState<number>(1); 
+    // only for testing connect to db for real render
+    const [notifications]= useState<number>(0); 
   return (
     <div className={`${styles.iconWrapper} ${styles[theme]}`}>
       <RiChat1Line className={styles.chatIcon} />
