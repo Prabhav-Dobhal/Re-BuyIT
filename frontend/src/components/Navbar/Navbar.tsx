@@ -3,7 +3,7 @@ import styles from "./Navbar.module.css";
 import Logo from "../Logo/Logo";
 import ToggleSwitch from "../Navbar/ToggleSwitch/ToggleSwitch";
 import Sellbutton from "./SellButton/Sellbutton";
-import Login from "../Navbar/Login/Login";
+import LoginButton from "./LoginButton/LoginButton";
 import WishlistButton from "../Navbar/Wishlist/Wishlist";
 import LocationSearchBar from "../Navbar/LocationSearchBar/LocationSearchBar";
 import ItemSearchBar from "../Navbar/ItemSearchBar/ItemSearchBar";
@@ -18,7 +18,7 @@ const Navbar: React.FC = () => {
         <Logo />
         <LocationSearchBar />
         <ItemSearchBar />
-        <Login />
+        <LoginButton />
         <WishlistButton />
         <ToggleSwitch />
         <Sellbutton />
