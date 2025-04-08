@@ -31,6 +31,9 @@ const WishList: React.FC = () => {
               <span>Like ads and share</span>
               <span>them with the world</span>
             </div>
+            <div className={styles.discoverContainer}>
+              <button className={styles.discoverbtn}>Discover</button>
+            </div>
           </div>
         ) : (
           <div className={styles.wishListCardContainer}>

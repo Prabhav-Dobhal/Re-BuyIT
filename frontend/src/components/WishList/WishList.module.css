@@ -61,3 +61,32 @@
 .darkMode .emptyListTextWrapper {
   color: #cccccc;
 }
+.discoverContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 2vw;
+}
+
+.discoverbtn {
+  padding: 0.8vw 2vw;
+  font-size: 1.2vw;
+  border: none;
+  border-radius: 0.5vw;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.discoverbtn:hover {
+  background-color: #0056b3;
+}
+.darkMode .discoverbtn {
+  background-color: #1e88e5;
+  color: white;
+}
+
+.darkMode .discoverbtn:hover {
+  background-color: #1565c0;
+}

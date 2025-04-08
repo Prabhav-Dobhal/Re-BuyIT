@@ -95,35 +95,34 @@
 }
 
 .heartRedIconFilled {
-  width: 100%;
-  height: 100%;
+  width: 2.8vw;
+  height: 2.3vw;
   object-fit: contain;
   transition: transform 0.2s ease;
+  transform: translate(0.5vw);
 }
 
 .heartRedIconFilled:hover {
   transform: scale(1.1);
+  transform: translate(0.5vw);
 }
 
 .heartIconOutline {
-  width: 100%;
-  height: 100%;
+  width: 1.7vw;
+  height: 1.7vw;
   object-fit: contain;
   transition: transform 0.2s ease;
   border: 1px solid black;
   background-color: white;
   border-radius: 50%;
   padding: 0.2vw;
+  transform: translate(0.8vw);
 }
 
 /* 🌓 Dark Mode for heart outline */
 .dark .heartIconOutline {
   border: 1px solid white;
   background-color: #333;
-}
-
-.heartIconOutline:hover {
-  transform: scale(1.1);
 }
 
 /* Mobile Screens */
