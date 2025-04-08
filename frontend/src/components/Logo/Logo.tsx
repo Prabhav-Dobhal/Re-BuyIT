@@ -4,9 +4,8 @@ import { useTheme } from "../../hooks/useTheme";
 import cartIcon from "../../assets/Cartlogo.png"; 
 const Logo: React.FC = () => {
     const { theme } = useTheme();  
-
     return (
-        <div className={`${styles.cartContainer} ${styles[theme]}`}>
+        <div className={`${styles.cartContainer} ${styles[theme]}`} onClick={() => window.location.href = "/"}>
             <div className={`${styles.cartLogo} ${styles[theme]}`}>
                 <img
                     src={cartIcon}
