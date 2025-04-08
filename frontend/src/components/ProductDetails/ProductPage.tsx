@@ -1,12 +1,12 @@
 import styles from './ProductPage.module.css';
 import Right from './Right';
-import Left from './Left';
+import PoductDetailsLeftSection from './ProductDetailsLeftSection';
 
 const ProductPage: React.FC = () => {
     return (
         <div className={styles.container_left_right}>
             <div className={styles.left_section}>
-                <Left />
+                <PoductDetailsLeftSection />
             </div>
              <div className={styles.right_section}>
                 <Right />

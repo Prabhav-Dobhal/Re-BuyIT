@@ -4,11 +4,12 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Pagination, Navigation, Autoplay } from 'swiper/modules';
-import styles from './left.module.css';
+import styles from './productdetailsleftsection.module.css';
 import { useTheme } from "../../hooks/useTheme";
 import { ProductData } from './productTypes';
 
-const Left: React.FC = () => {
+const ProductDetailsLeftSection: React.FC = () => {
+
     const { theme } = useTheme();
     const [product, setProduct] = useState<ProductData>({
         details: [],
@@ -41,10 +42,11 @@ const Left: React.FC = () => {
                     <h2>Details</h2>
                     <div className={styles.detailsGrid}>
                         {product.details.map((item, index) => (
-                            <div key={index}>
+                            <div key={index} >
                                 <strong>{item.label}:</strong> {item.value}
                             </div>
-                        ))}
+                         ))} 
+                        
                     </div>
                     <hr />
                     <h2>Description</h2>
@@ -57,4 +59,4 @@ const Left: React.FC = () => {
     );
 };
 
-export default Left;
+export default ProductDetailsLeftSection;

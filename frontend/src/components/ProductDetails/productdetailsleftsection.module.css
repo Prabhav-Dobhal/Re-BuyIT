@@ -62,13 +62,18 @@
 
     .carousel img {
         height: 250px;
-        /* Adjust height on smaller screens */
+    }
+   
+}
+@media (max-width: 600px) {
+    .detailsGrid {
+        grid-template-columns: 1fr;
+        margin-left: 10px;
     }
 }
 
 @media (max-width: 480px) {
     .carousel img {
         height: 200px;
-        /* Even smaller height for mobile */
     }
 }
