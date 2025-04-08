@@ -3,10 +3,16 @@ import styles from "./WishList.module.css";
 import { RecommendationCard } from "../Recommendations/Recommendation.types";
 import RecommendationCardComponent from "../RecommendationCard/RecommendationCardComponent";
 import { useTheme } from "../../hooks/useTheme";
+import { useNavigate } from "react-router-dom";
 
 const WishList: React.FC = () => {
   const [wishListItems, setWishListItems] = useState<RecommendationCard[]>([]);
   const { theme } = useTheme();
+  const navigate = useNavigate();
+
+  const handleNavigateToHomePage = (): void => {
+    navigate("/");
+  };
 
   return (
     <>
@@ -32,7 +38,12 @@ const WishList: React.FC = () => {
               <span>them with the world</span>
             </div>
             <div className={styles.discoverContainer}>
-              <button className={styles.discoverbtn}>Discover</button>
+              <button
+                className={styles.discoverbtn}
+                onClick={handleNavigateToHomePage}
+              >
+                Discover
+              </button>
             </div>
           </div>
         ) : (
