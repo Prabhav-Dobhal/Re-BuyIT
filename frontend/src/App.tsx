@@ -6,7 +6,7 @@ import BackToTop from "./components/BackToTop/BackToTop";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LoadingAnimation from "./components/LoadingReBuyIt/animation";
 import useLoading from "./hooks/useLoading"
-import MyAds from "./components/MyAds-Endpoint/myAds";
+import MyAds from "./components/myAds/myAds";
 
 function App() {
   const isLoading = useLoading();

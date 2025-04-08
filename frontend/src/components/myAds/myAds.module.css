@@ -43,3 +43,17 @@
   .button:hover {
     background-color: #2563eb;
   }
+
+  .dark {
+    background-color: #1f2937;
+    color: #f3f4f6;
+  }
+  
+  .dark .heading {
+    color: #f9fafb;
+  }
+  
+  .dark .subtext {
+    color: #9ca3af;
+  }
+  
