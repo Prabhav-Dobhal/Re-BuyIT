@@ -5,11 +5,11 @@ body{
   position: relative;
   display: flex;
   align-items: center; 
-  width: 47vw;
+  width: 43vw;
 }
 
 .searchBar {
-  width: 90%;
+  width: 95%;
   padding: 12px 16px;
   border: 2px solid #ddd;
   border-radius: 25px;
@@ -20,7 +20,7 @@ body{
 
 .searchButton {
   position: absolute;
-  right: 3vw; 
+  right: 1vw; 
   background: none;
   border: none;
   cursor: pointer;
