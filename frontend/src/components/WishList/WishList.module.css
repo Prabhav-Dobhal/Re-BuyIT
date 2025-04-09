@@ -1,0 +1,91 @@
+.wishListContainer {
+  width: 95vw;
+  height: auto;
+  border-radius: 0.3vw;
+  margin: 2vw;
+  padding-bottom: 1vw;
+}
+.wishListEmpty {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+.emptyWishListImg {
+  width: 20vw;
+  height: 20vw;
+  translate: calc(4.5vw);
+}
+.emptyListTextWrapper {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5vw;
+  color: gray;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.emptyListHeadline {
+  font-size: 2vw;
+  font-weight: bold;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.wishListCardContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 4vw;
+  width: 90%;
+  margin-top: 2vw;
+  margin-left: 1vw;
+}
+
+.wishListContainer.darkMode {
+  background-color: #212121;
+}
+
+.wishListHeading {
+  font-size: 2.5vw;
+  font-weight: bold;
+  padding: 1vw 2vw;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: black;
+}
+
+.darkMode .wishListHeading {
+  color: white;
+}
+.darkMode .emptyListHeadline {
+  color: white;
+}
+
+.darkMode .emptyListTextWrapper {
+  color: #cccccc;
+}
+.discoverContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 2vw;
+}
+
+.discoverbtn {
+  padding: 0.8vw 2vw;
+  font-size: 1.2vw;
+  border: none;
+  border-radius: 0.5vw;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.discoverbtn:hover {
+  background-color: #0056b3;
+}
+.darkMode .discoverbtn {
+  background-color: #1e88e5;
+  color: white;
+}
+
+.darkMode .discoverbtn:hover {
+  background-color: #1565c0;
+}
