@@ -7,20 +7,18 @@ import {
   FaBoxOpen,
   FaUser,
 } from 'react-icons/fa';
-
-/*
- * Renders a profile dropdown menu
- */
-
+import { useTheme } from '../../../hooks/useTheme';
 
 interface ProfileDropdownProps {
   openFlag: boolean;
 }
 
-const ProfileDropdown: React.FC<ProfileDropdownProps> = (props) => {
+const ProfileDropdown: React.FC<ProfileDropdownProps> = ({ openFlag }) => {
+  const {theme} = useTheme(); //  returns 'dark' | 'light'
+
   return (
-    <div className={styles.dropdownContainer}>
-      {props.openFlag && (
+    <div className={`${styles.dropdownContainer} ${styles[theme]}`}>
+      {openFlag && (
         <div className={styles.dropdownMenu}>
           <ul className={styles.menuList}>
             <li><FaUser /> Profile</li>
