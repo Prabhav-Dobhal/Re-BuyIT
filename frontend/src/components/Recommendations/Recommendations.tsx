@@ -9,7 +9,8 @@ const Recommendation = () => {
 
   const [recommendationCards, setRecommendatonCards] = useState<
     RecommendationCard[]
-  >();
+  >([]);
+
   return (
     <>
       <div
@@ -17,13 +18,17 @@ const Recommendation = () => {
           theme === "dark" ? styles.dark : ""
         }`}
       >
-        <h2>Fresh Recommendation</h2>
+        <h2 className={styles.freshRecommendationHeaderText}>
+          Fresh Recommendation
+        </h2>
         <div className={styles.recommendationcardscontainer}>
           {recommendationCards?.map((recommendationCard, index) => {
             return (
               <RecommendationCardComponent
                 key={index}
                 {...recommendationCard}
+                //Don't forget to fetch it from User DB and update here
+                isWishListItem={false}
               />
             );
           })}

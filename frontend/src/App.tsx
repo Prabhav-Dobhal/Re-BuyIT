@@ -7,6 +7,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LoadingAnimation from "./components/LoadingReBuyIt/animation";
 import useLoading from "./hooks/useLoading"
 import MyAds from "./components/myAds/myAds";
+import WishList from "./components/WishList/WishList";
+import ProductPage from "./components/ProductDetails/ProductPage";
 
 function App() {
   const isLoading = useLoading();
@@ -19,6 +21,8 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/myads" element={<MyAds />} />
+        <Route path="/productDetails" element={<ProductPage />} />
+        <Route path="/WishList" element={<WishList />} />
       </Routes>
       <BackToTop />
       <Footer />
