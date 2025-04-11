@@ -4,6 +4,7 @@ import Footer from "./components/Footer/Footer";
 import HomePage from "./components/Homepage/Homepage";
 import BackToTop from "./components/BackToTop/BackToTop";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ProductPage from "./components/ProductDetails/ProductPage";
 import LoadingAnimation from "./components/LoadingReBuyIt/animation";
 import useLoading from "./hooks/useLoading"
 import MyAds from "./components/myAds/myAds";
