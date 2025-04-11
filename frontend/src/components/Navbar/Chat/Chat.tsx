@@ -5,7 +5,7 @@ import {useTheme} from '../../../hooks/useTheme';
 import { Link } from 'react-router-dom'
 
 const Chat: React.FC = () => {
-    const theme = useTheme();
+    const {theme} = useTheme();
     // only for testing connect to db for real render
     const [notifications]= useState<number>(0); 
   return (

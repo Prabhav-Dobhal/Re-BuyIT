@@ -1,0 +1,106 @@
+.sellpagehome {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: #f9f9f9;
+  color: black;
+  padding-top: 30px;
+}
+.dark .sellpagehome{
+  color: white;
+  background: black;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: black;
+  text-align: center;
+}
+
+.categorysection {
+  width: 78vw;
+  background: #fdfdfd;
+  padding: 1vw;
+  border-radius: 8px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dark .categorysection{
+  background: #222;
+  box-shadow: 0px 2px 6px rgb(37, 37, 37);
+}
+.categorytitle {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: white;
+}
+.dark .categorytitle {
+  background: inherit;
+}
+
+.categorylist {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 95%;
+  margin-left: 5%;
+}
+.dark .categorylist {
+  background-color: #222;
+}
+.categoryitem {
+  border-radius: 20px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+.dark .categoryitem {
+  background-color: #222;
+}
+.dark .categorylink{
+  background: inherit;
+}
+.categorylink {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  padding : 15px;
+  border-radius: 60px;
+  display: flex;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+}
+
+.categorylink:hover {
+  transition : transform 0.3s ease, background 0.3s ease ;
+  background: #cccccc8d;
+  transform: scale(1.03);
+  border-radius: 20px;
+  color : #007bff;
+}
+
+.dark .categorylink:hover {
+  transition : transform 0.3s ease, background 0.3s ease ;
+  background: #333;
+  transform: scale(1.03);
+  border-radius: 20px;
+  color : #25ac5d;
+}
+
+.light {
+  background-color: #f9f9f9;
+  color : black;
+}
+.dark{
+  background-color: black;
+  color : white;
+}

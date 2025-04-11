@@ -9,13 +9,16 @@ import LocationSearchBar from "../Navbar/LocationSearchBar/LocationSearchBar";
 import ItemSearchBar from "../Navbar/ItemSearchBar/ItemSearchBar";
 import { useTheme } from "../../hooks/useTheme"; 
 import Notification from "./Notification/Notification";
-import Chat from "./Chat/Chat";
+import Chat from "./Chat/Chat";import { useLocation } from "react-router-dom";
+import BackButton from "./BackButton/Backbutton";
 const Navbar: React.FC = () => {
   const {theme} = useTheme();
-
+  const location = useLocation();
   return (
     <nav className={`${styles.navbar} ${styles[theme]}`}>
-      <div className={styles.navbarContent}>
+      {
+      location.pathname==='/' ?
+        <div className={styles.navbarContent}>
         <Logo />
         <LocationSearchBar />
         <ItemSearchBar />
@@ -25,7 +28,9 @@ const Navbar: React.FC = () => {
         <Notification />
         <ToggleSwitch />
         <Sellbutton />
-      </div>
+      </div> : <BackButton />
+      
+      }
     </nav>
   );
 };

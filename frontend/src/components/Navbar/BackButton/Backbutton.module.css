@@ -1,0 +1,16 @@
+.btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #fff;
+  }
+  
+  .light {
+    background-color: #007bff;
+  }
+  
+  .dark {
+    background-color: #25ac5d;
+  }
+  

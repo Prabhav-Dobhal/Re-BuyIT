@@ -1,0 +1,125 @@
+.sellCategoryContainer {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 10px;
+  padding-left: 7vw;
+  color: black;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Form Inputs */
+.dropdown
+{
+  width: 100%;
+  max-width: 58vw;
+  font-size: 1rem;
+  margin-bottom: 1.5vw;
+  padding: 0.75rem 1rem;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  background-color: white;
+  color: black;
+  transition: all 0.3s ease;
+  /* background-color: yellow; */
+}
+.dark.dropdown,.dark.textareaBox,.dark.inputBox
+{
+  border: 0.1px solid #25ac5d36;
+  border-radius: 0.5rem;
+  background-color: #111111d0;
+  color: white;
+  transition: all 0.3s ease;
+  /* background-color: yellow; */
+}
+
+.textareaBox {
+  width: 10%;
+  max-width: 800px;
+  font-size: 1rem;
+  margin-bottom: 1.5vw;
+  padding: 0.75rem 1rem;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  background-color: white;
+  color: black;
+  transition: all 0.3s ease;
+  /* background-color: green; */
+}
+
+
+.inputBox{
+  width: 80%;
+  max-width: 800px;
+  font-size: 1rem;
+  margin-bottom: 1.5vw;
+  padding: 0.75rem 1rem;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  background-color: white;
+  color: black;
+  transition: all 0.3s ease;
+  /* background-color: red; */
+}
+
+.inputBox.dark:focus,
+.dropdown.dark:focus,
+.textareaBox.dark:focus {
+  outline: none;
+  appearance: none;
+  border: 0.1px solid #25ac5d;
+  box-shadow: 0 0 0 1px rgb(25, 172, 47);
+  color : white;
+}
+
+/* Textarea */
+.textareaBox {
+  height: 160px;
+  width: 80%;
+  resize: vertical;
+}
+
+/* Form Grouping */
+.formGroup {
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  max-width: 800px;
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+}
+.inputBox:focus,
+.dropdown:focus,
+.textareaBox:focus {
+  outline: none;
+  appearance: none;
+  border: 0.1px solid #007bff;
+  box-shadow: 0 0 0 1px rgba(59, 131, 246, 0.909);
+  color : black;
+}
+
+/* Dropdown Enhancements */
+.dropdown {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg fill='gray' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1.2rem;
+}
+
+.light {
+    background-color: white;
+    color : black
+}
+.dark{
+  background-color: black;
+  color : white;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
