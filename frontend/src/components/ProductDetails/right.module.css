@@ -28,12 +28,9 @@
     color: #333;
   }
   
-  .icons {
+  .icon {
     display: flex;
     gap: 10px;
-  }
-  
-  .icon {
     cursor: pointer;
     color: #666;
   }
