@@ -1,27 +1,50 @@
 .sellCategorySectionContainer {
-  width: 80vw;
+  display: flex;
+  width: 75vw;
+  flex-direction: column;
   border: 1px solid black;
+  border-radius: 12px;
+  padding: 2vh;
+}
+.sellCategorySectionContainer .dark{
+  background-color: #111111d0;
+  color: white;
+  padding: 2vh;
+  border-radius: 12px 0px;
 }
 
 .setAPriceContainer {
-  display: grid;
-  justify-content: start;
-  align-items: center;
-  border: 0.2vw solid gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  /* background-color: red; */
 }
-
+/* .light{
+  color : #212121;
+  background-color: white;
+}
+.dark{
+  color : white;
+  background-color: black;
+} */
 .setprice {
-  font-size: 3vw;
-  font-weight: bold;
-  margin: 2vw;
+  font-size: 40px;
+  font-weight: 300;
+  margin: 5px;
+  padding : 10px;
+  margin-left: 10px;
+  /* background-color: blue; */
 }
 
 .setpriceinput {
-  padding-left: 3vw;
+  padding-left: 40px;
+  /* background-color: green; */
   width: 40vw;
   height: 3vw;
-  font-size: 2.5vw;
-  border-radius: 0.5vw;
+  font-size: 24px;
+  border-radius: 15px;
+  margin : 20px;
 }
 
 .inputWrapper {
@@ -30,13 +53,22 @@
   align-items: center;
   margin-bottom: 3vw;
   margin-left: 2vw;
+  /* background-color: violet; */
+}
+.inputWrapper .dark{
+  background-color: #212121;
+  color: white;
+  padding: 2vh;
+  padding-left: 3vw;
+  border : 0.1px solid #25ac5d
 }
 
 .currencySymbol {
   position: absolute;
-  left: 1vw;
-  font-size: 2.5vw;
-  color: gray;
+  left: 2vw;
+  font-size: 28px;
+  color: inherit;
+  opacity: 0.8;
   pointer-events: none; /* So the input still gets focus */
 }
 
@@ -102,17 +134,17 @@
   display: inline-flex;
   align-items: center;
   padding: 1vw 2vw;
-  background-color: #4a91e2d4;
+  background-color: #007bffd7;
   color: white;
   border-radius: 0.5vw;
-  font-size: 1.8vw;
+  font-size: 20px;
   cursor: pointer;
-  margin: 1.5vw;
+  margin: 1vw;
   gap: 1vw;
 }
 
 .customFileUpload:hover {
-  background-color: #4378b4d4;
+  background-color: #067aff;
 }
 
 .uploadIcon {
@@ -132,10 +164,10 @@
   height: 4vw;
   width: 18vw;
   font-size: 1.4vw;
-  font-weight: 600;
+  font-weight: 400;
   border-radius: 0.7vw;
   margin: 1vw 2vw;
-  background: linear-gradient(135deg, #fff4e6, #ffe8cc);
+  background: linear-gradient(135deg, #f1c183, #db8114);
   color: #5c4b2f;
   border: none;
   box-shadow: 0 0.3vw 0.6vw rgba(0, 0, 0, 0.1);
@@ -144,7 +176,7 @@
 
 .currentLocationBtn:hover {
   cursor: pointer;
-  background: linear-gradient(135deg, #ffe8cc, #ffd8a8);
+  background: linear-gradient(135deg, #e29639, #ffd8a8);
   transform: scale(1.02);
 }
 
@@ -155,17 +187,17 @@
   font-size: 1.6vw;
   font-weight: 600;
   border-radius: 1vw;
-  background: linear-gradient(135deg, #4a90e2, #357ab7);
+  background: linear-gradient(135deg, #007bff, #067aff);
   color: white;
   border: none;
   box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.2);
   transition: transform 0.2s ease, background 0.3s ease;
-  margin: 2vw auto;
+  margin: 1vw auto;
   display: block;
 }
 
 .postBtn:hover {
   cursor: pointer;
   background: linear-gradient(135deg, #357ab7, #2e6bb0);
-  transform: translateY(-0.2vw);
+  transform: translateY(-0.1vw) scale(1.02) ;
 }

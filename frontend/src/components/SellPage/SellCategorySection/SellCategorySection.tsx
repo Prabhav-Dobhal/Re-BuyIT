@@ -32,7 +32,7 @@ const SellCategorySection: React.FC = () => {
     <div className={`${styles.sellCategorySectionContainer} ${styles[theme]}`}>
       <div className={`${styles.setAPriceContainer} ${styles[theme]}`}>
         <span className={`${styles.setprice} ${styles[theme]}`}>
-          SET A PRICE*
+          Set a price : 
         </span>
         <div className={styles.inputWrapper}>
           <span className={styles.currencySymbol}>₹</span>
@@ -46,7 +46,7 @@ const SellCategorySection: React.FC = () => {
 
       <div className={`${styles.uploadPhotosContainer} ${styles[theme]}`}>
         <label htmlFor="imageUpload" className={styles.customFileUpload}>
-          <FaUpload className={styles.uploadIcon} />
+          <FaUpload name ="imageUpload"className={styles.uploadIcon} />
           Choose Photos
         </label>
         <input
@@ -84,7 +84,7 @@ const SellCategorySection: React.FC = () => {
 
       <div className={`${styles.setAPriceContainer} ${styles[theme]}`}>
         <span className={`${styles.setprice} ${styles[theme]}`}>
-          CONFIRM LOCATION*
+          Confirm Location :
         </span>
         <button className={`${styles.currentLocationBtn} ${styles[theme]}`}>
           Detect Current Location

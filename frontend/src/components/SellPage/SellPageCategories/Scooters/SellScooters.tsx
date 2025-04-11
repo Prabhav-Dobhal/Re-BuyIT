@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, ChangeEvent } from "react";
 import SellCategorySection from "../../SellCategorySection/SellCategorySection";
 import styles from "./SellScooters.module.css";
-
-const indianScooterBrands = [
+import { useTheme } from "../../../../hooks/useTheme";
+import { preventScrollTrigger } from "../../../../utils/preventScrollTrigger";
+import { preventInvalidNumberKeys } from "../../../../utils/preventInvalidNumberKeys";
+const indianScooterBrands: string[] = [
   "Honda",
   "TVS",
   "Suzuki",
@@ -16,26 +18,32 @@ const indianScooterBrands = [
 ];
 
 const SellScooters: React.FC = () => {
-  const [brand, setBrand] = useState("");
-  const [fuelType, setFuelType] = useState("");
-  const [kmDriven, setKmDriven] = useState("");
-  const [modelYear, setModelYear] = useState("");
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
+  const [brand, setBrand] = useState<string>("");
+  const [fuelType, setFuelType] = useState<string>("");
+  const [kmDriven, setKmDriven] = useState<string>("");
+  const [modelYear, setModelYear] = useState<string>("");
+  const [title, setTitle] = useState<string>("");
+  const [description, setDescription] = useState<string>("");
+  const { theme } = useTheme();
+
+  const handleChange =
+    (setter: React.Dispatch<React.SetStateAction<string>>) =>
+    (e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) =>
+      setter(e.target.value);
 
   return (
-    <div className={styles.sellCategoryContainer}>
-      <h1 className={styles.sellTitle}>Add Your Scooter for Sale</h1>
-      <p className={styles.sellDescription}>
+    <div className={`${styles.sellCategoryContainer} ${styles[theme]}`}>
+      <h1 className={`${styles.sellTitle} ${styles[theme]}`}>Add Your Scooter for Sale</h1>
+      <p className={`${styles.sellDescription} ${styles[theme]}`}>
         Fill in the details below to list your scooter. Add brand, fuel type,
         kilometers driven, model year, price, photos, and location to attract
         the right buyers.
       </p>
 
       <select
-        className={styles.dropdown}
+        className={`${styles.dropdown} ${styles[theme]}`}
         value={brand}
-        onChange={(e) => setBrand(e.target.value)}
+        onChange={handleChange(setBrand)}
         required
       >
         <option value="">Select Brand</option>
@@ -47,9 +55,9 @@ const SellScooters: React.FC = () => {
       </select>
 
       <select
-        className={styles.dropdown}
+        className={`${styles.dropdown} ${styles[theme]}`}
         value={fuelType}
-        onChange={(e) => setFuelType(e.target.value)}
+        onChange={handleChange(setFuelType)}
         required
       >
         <option value="">Select Fuel Type</option>
@@ -60,35 +68,39 @@ const SellScooters: React.FC = () => {
       <input
         type="number"
         placeholder="Kilometers Driven"
-        className={styles.inputBox}
+        className={`${styles.inputBox} ${styles[theme]}`}
         value={kmDriven}
-        onChange={(e) => setKmDriven(e.target.value)}
+        onChange={handleChange(setKmDriven)}
+        onWheel={preventScrollTrigger}
+        onKeyDown={preventInvalidNumberKeys}
         required
       />
 
       <input
         type="number"
         placeholder="Model Year (e.g. 2020)"
-        className={styles.inputBox}
+        className={`${styles.inputBox} ${styles[theme]}`}
         value={modelYear}
-        onChange={(e) => setModelYear(e.target.value)}
+        onKeyDown={preventInvalidNumberKeys}
+        onChange={handleChange(setModelYear)}
+        onWheel={preventScrollTrigger}
         required
       />
 
       <input
         type="text"
         placeholder="Enter Title"
-        className={styles.inputBox}
+        className={`${styles.inputBox} ${styles[theme]}`}
         value={title}
-        onChange={(e) => setTitle(e.target.value)}
+        onChange={handleChange(setTitle)}
         required
       />
 
       <textarea
         placeholder="Enter Description"
-        className={styles.textareaBox}
+        className={`${styles.textareaBox} ${styles[theme]}`}
         value={description}
-        onChange={(e) => setDescription(e.target.value)}
+        onChange={handleChange(setDescription)}
         required
       />
 

@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, ChangeEvent } from "react";
 import SellCategorySection from "../../SellCategorySection/SellCategorySection";
 import styles from "./SellPhones.module.css";
+import { useTheme } from "../../../../hooks/useTheme";
 
-const phoneBrands = [
+const phoneBrands: string[] = [
   "Samsung",
   "Apple",
   "Xiaomi",
@@ -19,26 +20,35 @@ const phoneBrands = [
 ];
 
 const SellPhones: React.FC = () => {
-  const [brand, setBrand] = useState("");
-  const [model, setModel] = useState("");
-  const [storage, setStorage] = useState("");
-  const [condition, setCondition] = useState("");
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
+  const [brand, setBrand] = useState<string>("");
+  const [model, setModel] = useState<string>("");
+  const [storage, setStorage] = useState<string>("");
+  const [condition, setCondition] = useState<string>("");
+  const [title, setTitle] = useState<string>("");
+  const [description, setDescription] = useState<string>("");
+
+  // Example theme variable – replace with actual theme logic
+  const {theme }=useTheme();
+
+  const handleChange =
+    (setter: React.Dispatch<React.SetStateAction<string>>) =>
+    (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+      setter(e.target.value);
+    };
 
   return (
-    <div className={styles.sellCategoryContainer}>
-      <h1 className={styles.sellTitle}>Add Your Phone for Sale</h1>
-      <p className={styles.sellDescription}>
+    <div className={`${styles.sellCategoryContainer} ${styles[theme]}`}>
+      <h1 className={`${styles.sellTitle} ${styles[theme]}`}>Add Your Phone for Sale</h1>
+      <p className={`${styles.sellDescription} ${styles[theme]}`}>
         Fill in the details below to list your phone. Add brand, model, storage,
         condition, title, description, price, and photos to reach the right
         buyers.
       </p>
 
       <select
-        className={styles.dropdown}
+        className={`${styles.dropdown} ${styles[theme]}`}
         value={brand}
-        onChange={(e) => setBrand(e.target.value)}
+        onChange={handleChange(setBrand)}
         required
       >
         <option value="">Select Brand</option>
@@ -52,25 +62,25 @@ const SellPhones: React.FC = () => {
       <input
         type="text"
         placeholder="Phone Model (e.g. iPhone 13, Galaxy S21)"
-        className={styles.inputBox}
+        className={`${styles.inputBox} ${styles[theme]}`}
         value={model}
-        onChange={(e) => setModel(e.target.value)}
+        onChange={handleChange(setModel)}
         required
       />
 
       <input
         type="text"
         placeholder="Storage (e.g. 64GB, 128GB)"
-        className={styles.inputBox}
+        className={`${styles.inputBox} ${styles[theme]}`}
         value={storage}
-        onChange={(e) => setStorage(e.target.value)}
+        onChange={handleChange(setStorage)}
         required
       />
 
       <select
-        className={styles.dropdown}
+        className={`${styles.dropdown} ${styles[theme]}`}
         value={condition}
-        onChange={(e) => setCondition(e.target.value)}
+        onChange={handleChange(setCondition)}
         required
       >
         <option value="">Select Condition</option>
@@ -83,17 +93,17 @@ const SellPhones: React.FC = () => {
       <input
         type="text"
         placeholder="Enter Title"
-        className={styles.inputBox}
+        className={`${styles.inputBox} ${styles[theme]}`}
         value={title}
-        onChange={(e) => setTitle(e.target.value)}
+        onChange={handleChange(setTitle)}
         required
       />
 
       <textarea
         placeholder="Enter Description"
-        className={styles.textareaBox}
+        className={`${styles.textareaBox} ${styles[theme]}`}
         value={description}
-        onChange={(e) => setDescription(e.target.value)}
+        onChange={handleChange(setDescription)}
         required
       />
 

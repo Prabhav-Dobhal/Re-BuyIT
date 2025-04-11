@@ -10,7 +10,7 @@ import ItemSearchBar from "../Navbar/ItemSearchBar/ItemSearchBar";
 import { useTheme } from "../../hooks/useTheme"; 
 import Notification from "./Notification/Notification";
 import Chat from "./Chat/Chat";import { useLocation } from "react-router-dom";
-
+import BackButton from "./BackButton/Backbutton";
 const Navbar: React.FC = () => {
   const {theme} = useTheme();
   const location = useLocation();
@@ -28,7 +28,7 @@ const Navbar: React.FC = () => {
         <Notification />
         <ToggleSwitch />
         <Sellbutton />
-      </div> : <div>Backbtn</div>
+      </div> : <BackButton />
       
       }
     </nav>

@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import SellCategorySection from "../../SellCategorySection/SellCategorySection";
 import styles from "./SellMotorcycles.module.css";
-
+import {useTheme} from '../../../../hooks/useTheme'
+import { preventScrollTrigger } from "../../../../utils/preventScrollTrigger";
+import { preventInvalidNumberKeys } from "../../../../utils/preventInvalidNumberKeys";
 const indianMotorcycleBrands = [
   "Royal Enfield",
   "Hero",
@@ -24,17 +26,20 @@ const SellMotorcycles: React.FC = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
 
+  
+  const {theme} = useTheme(); 
+
   return (
-    <div className={styles.sellCategoryContainer}>
-      <h1 className={styles.sellTitle}>Add Your Motorcycle for Sale</h1>
-      <p className={styles.sellDescription}>
+    <div className={`${styles.sellCategoryContainer} ${styles[theme]}`}>
+      <h1 className={`${styles.sellTitle} ${styles[theme]}`}>Add Your Motorcycle for Sale</h1>
+      <p className={`${styles.sellDescription} ${styles[theme]}`}>
         Fill in the details below to list your motorcycle. Add brand, fuel type,
         kilometers driven, model year, price, photos, and location to attract
         the right buyers.
       </p>
 
       <select
-        className={styles.dropdown}
+        className={`${styles.dropdown} ${styles[theme]}`}
         value={brand}
         onChange={(e) => setBrand(e.target.value)}
         required
@@ -48,7 +53,7 @@ const SellMotorcycles: React.FC = () => {
       </select>
 
       <select
-        className={styles.dropdown}
+        className={`${styles.dropdown} ${styles[theme]}`}
         value={fuelType}
         onChange={(e) => setFuelType(e.target.value)}
         required
@@ -61,25 +66,29 @@ const SellMotorcycles: React.FC = () => {
       <input
         type="number"
         placeholder="Kilometers Driven"
-        className={styles.inputBox}
+        className={`${styles.inputBox} ${styles[theme]}`}
         value={kmDriven}
         onChange={(e) => setKmDriven(e.target.value)}
+        onWheel={preventScrollTrigger}
+        onKeyDown={preventInvalidNumberKeys}
         required
       />
 
       <input
         type="number"
         placeholder="Model Year (e.g. 2020)"
-        className={styles.inputBox}
+        className={`${styles.inputBox} ${styles[theme]}`}
         value={modelYear}
         onChange={(e) => setModelYear(e.target.value)}
+        onWheel={preventScrollTrigger}
+        onKeyDown={preventInvalidNumberKeys}
         required
       />
 
       <input
         type="text"
         placeholder="Enter Title"
-        className={styles.inputBox}
+        className={`${styles.inputBox} ${styles[theme]}`}
         value={title}
         onChange={(e) => setTitle(e.target.value)}
         required
@@ -87,7 +96,7 @@ const SellMotorcycles: React.FC = () => {
 
       <textarea
         placeholder="Enter Description"
-        className={styles.textareaBox}
+        className={`${styles.textareaBox} ${styles[theme]}`}
         value={description}
         onChange={(e) => setDescription(e.target.value)}
         required
