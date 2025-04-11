@@ -9,6 +9,7 @@ import useLoading from "./hooks/useLoading"
 import MyAds from "./components/myAds/myAds";
 import WishList from "./components/WishList/WishList";
 import ProductPage from "./components/ProductDetails/ProductPage";
+import NotFound from "./components/NotFound/NotFound";
 
 function App() {
   const isLoading = useLoading();
@@ -23,6 +24,7 @@ function App() {
         <Route path="/myads" element={<MyAds />} />
         <Route path="/productDetails" element={<ProductPage />} />
         <Route path="/WishList" element={<WishList />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <BackToTop />
       <Footer />
