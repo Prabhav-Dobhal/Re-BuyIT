@@ -14,7 +14,7 @@
   width: 100%;
 }
 
-/* Recommendation Card Styles (No Changes for Large Screens) */
+/* Recommendation Card */
 .recommendationcardbox {
   display: flex;
   flex-direction: column;
@@ -28,6 +28,8 @@
   overflow: visible;
   position: relative;
   margin-left: 0.5vw;
+  background-color: white;
+  color: black;
 }
 
 .recommendationcardbox:hover {
@@ -36,11 +38,20 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
+.recommendationcardbox.darkMode {
+  background-color: rgba(30, 29, 29, 0.76);
+  color: white;
+  border: 2px solid #444;
+}
+
 .ProductImage {
   max-width: 100%;
-  height: auto;
+  height: 18vw;
+  width: 20vw;
   object-fit: contain;
   border-radius: 10px;
+  border: 0.01vw solid gray;
+  object-fit: cover;
 }
 
 .ProductFeatured {
@@ -69,18 +80,60 @@
   margin-top: 5px;
 }
 
-/* Small Screens (Mobile Devices) */
-@media (max-width: 768px) {
+/* Heart Icon Wrapper */
+.heartRedIconWrapper {
+  position: absolute;
+  top: 1vw;
+  right: 1vw;
+  width: 3vw;
+  height: 3vw;
+  z-index: 10;
+}
+
+.heartRedIconWrapper:hover {
+  transform: scale(1.1);
+}
+
+.heartRedIconFilled {
+  width: 2.8vw;
+  height: 2.3vw;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+  transform: translate(0.5vw);
+}
+
+.heartRedIconFilled:hover {
+  transform: scale(1.1);
+  transform: translate(0.5vw);
+}
+
+.heartIconOutline {
+  width: 1.7vw;
+  height: 1.7vw;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 50%;
+  padding: 0.2vw;
+  transform: translate(0.8vw);
+}
+
+/* 🌓 Dark Mode for heart outline */
+.dark .heartIconOutline {
+  border: 1px solid white;
+  background-color: #333;
+}
+
+/* Mobile Screens */
+@media (max-width: 640px) {
   .recommendationcardscontainer {
-    grid-template-columns: repeat(
-      auto-fill,
-      minmax(350px, 1fr)
-    ); /* Bigger Cards */
+    grid-template-columns: 1fr;
     gap: 4vw;
   }
 
   .recommendationcardbox {
-    width: 100%;
+    width: 90%;
     height: auto;
     padding: 6vw;
   }
@@ -106,6 +159,13 @@
   .ProductDateAdded {
     font-size: 4vw;
   }
+
+  .heartRedIconWrapper {
+    width: 8vw;
+    height: 8vw;
+    top: 2vw;
+    right: 2vw;
+  }
 }
 
 /* Extra Small Screens (Phones < 480px) */
@@ -116,7 +176,7 @@
   }
 
   .recommendationcardbox {
-    width: 100%;
+    width: 90%;
     height: auto;
     padding: 7vw;
   }
@@ -141,5 +201,12 @@
   .ProductLocation,
   .ProductDateAdded {
     font-size: 5vw;
+  }
+
+  .heartRedIconWrapper {
+    width: 10vw;
+    height: 10vw;
+    top: 3vw;
+    right: 3vw;
   }
 }

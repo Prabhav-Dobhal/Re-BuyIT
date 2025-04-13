@@ -1,0 +1,52 @@
+.iconWrapper {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    padding-bottom: 3px;
+  }
+  
+  .chatIcon {
+    font-size: 1.8rem;
+    color: inherit;
+    transition: color 0.3s ease;
+    cursor: pointer;
+    height: 23px;
+  }
+.link {
+    color: inherit;
+    text-decoration: none;
+  }
+  .iconWrapper:hover .chatIcon {
+    color: #3b82f6; 
+    transform: scale(1.1);
+  }
+  
+  .notificationBadge {
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    background-color: red;
+    color: white;
+    font-size: 8px;
+    font-weight: bold;
+    border-radius: 70%;
+    padding: 0.25vh 0.25vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10px;
+    transition: background-color 0.3s ease;
+    z-index: 1;
+  }
+  
+  .light {
+    --bg-color: #ffffff;
+  }
+  
+  .dark {
+    --bg-color: #1f1f1f;
+  }
+  

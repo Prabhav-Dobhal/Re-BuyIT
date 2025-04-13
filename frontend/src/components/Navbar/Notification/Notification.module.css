@@ -1,0 +1,46 @@
+.chatContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+  }
+
+  .chatIcon {
+    font-size: 1.5rem;
+    color: inherit;
+    transition: color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+  }
+ .light .chatIcon {
+    color: black;
+  }
+  .dark .chatIcon {
+    color: white;
+  }
+
+  .chatIcon:hover {
+    color: #3b82f6;
+  }
+  .chatContainer:hover {
+    transform: scale(1.1) ;
+  }
+
+  .notificationCount {
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    background-color: red;
+    color: white;
+    font-size: 8px;
+    font-weight: bold;
+    border-radius: 70%;
+    padding: 0.25vh 0.25vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10px;
+    transition: background-color 0.3s ease;
+    z-index: 1;
+  }
+
